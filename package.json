@@ -1,0 +1,78 @@
+{
+  "name": "api-client-akeneo",
+  "version": "0.1.0",
+  "description": "A Node Rest Client for the Akeneo PIM",
+  "main": "index.js",
+  "scripts": {
+    "run": "clear ; node src/boot.js",
+    "test": "cross-env NODE_ENV=test jest",
+    "test:cov": "npm test -- --coverage"
+  },
+  "author": "Olivier Lépine <olivier@lepine.fr>",
+  "license": "Apache License 2.0",
+  "dependencies": {
+    "btoa": "^1.2.1",
+    "node-fetch": "^2.1.2",
+    "query-string": "^6.0.0"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "standard",
+      "prettier",
+      "plugin:import/errors"
+    ],
+    "plugins": [
+      "prettier",
+      "import"
+    ],
+    "parser": "babel-eslint",
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "arrowParens": "always",
+          "singleQuote": true,
+          "trailingComma": "es5",
+          "semi": false
+        }
+      ],
+      "no-irregular-whitespace": 0
+    },
+    "env": {
+      "browser": true,
+      "commonjs": true,
+      "es6": true,
+      "jest": true,
+      "node": true
+    }
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "notify": true
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.3",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "cross-env": "^5.1.4",
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "jest": "^22.4.3",
+    "prettier-eslint": "^8.8.1"
+  }
+}
