@@ -33,7 +33,7 @@ export class AkeneoClient {
       }),
     })
       .then((res) => {
-        if (res.status == 200) {
+        if (res.status === 200) {
           return res.json()
         } else {
           console.error(`Request returned status "${res.status}"`)
@@ -42,6 +42,7 @@ export class AkeneoClient {
       })
       .catch((err) => {
         console.error(err)
+        return false
       })
 
     if (json !== false) {
@@ -73,7 +74,7 @@ export class AkeneoClient {
       }
     )
       .then((res) => {
-        if (res.status == 200) {
+        if (res.status === 200) {
           return res.json()
         } else {
           console.error(
@@ -237,7 +238,6 @@ export class AkeneoParser {
       } else {
         obj.associations[association[0]] = {}
         for (let type of association[1]) {
-          //console.log(type)
           if (type.length == 0) {
             continue
           }

@@ -1,10 +1,10 @@
 {
-  "name": "api-client-akeneo",
-  "version": "0.1.0",
+  "name": "@crapougnax/api-client-akeneo",
+  "version": "0.2.0",
   "description": "A Node Rest Client for the Akeneo PIM",
   "main": "index.js",
   "scripts": {
-    "run": "clear ; node src/boot.js",
+    "run": "node boot.js",
     "test": "cross-env NODE_ENV=test jest",
     "test:cov": "npm test -- --coverage"
   },
